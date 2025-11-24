@@ -54,6 +54,8 @@
 }
 
 .bottom-nav {
+  display: flex;
+  justify-content: center;
   background: var(--brand);
   padding: 0.7rem 2rem;
   display: flex;

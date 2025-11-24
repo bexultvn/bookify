@@ -1,5 +1,68 @@
+/*HERO*/
 .hero {
-  padding: 3rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+  background: var(--bg-main);
 }
 
+.hero-left {
+  width: 45%;
+}
+
+.hero-left h1 {
+  font-size: 3rem;
+  color: var(--text-main);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.hero-left p {
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.hero-right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-books {
+  max-width: 100%;
+  border-radius: 4px;
+}
+/*FEATURES*/
+.features {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 2rem;
+  background: var(--bg-card);
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.feature-item i {
+  font-size: 2.3rem;
+  color: var(--brand);
+}
+
+.feature-item h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: .3rem;
+}
+
+.feature-item p {
+  font-size: .9rem;
+  color: var(--text-muted);
+}
 
