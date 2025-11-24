@@ -5,50 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Library – Bookify</title>
 
-  <link rel="stylesheet" href="styles/variables.css">
-  <link rel="stylesheet" href="styles/base.css">
-  <link rel="stylesheet" href="styles/layout/header.css">
-  <link rel="stylesheet" href="styles/layout/footer.css">
-  <link rel="stylesheet" href="styles/components/buttons.css">
-  <link rel="stylesheet" href="styles/components/cards.css">
-  <link rel="stylesheet" href="styles/pages/library.css">
+  <link rel="stylesheet" href="variables.css">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="../components/header.css">
+  <link rel="stylesheet" href="../components/footer.css">
+  <link rel="stylesheet" href="../components/buttons.css">
+  <link rel="stylesheet" href="../components/cards.css">
+  <link rel="stylesheet" href="library.css">
 
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 
 <body>
 
-<header class="header-fixed">
-  <div class="top-nav">
-    <div class="logo">Bookify</div>
-
-    <div class="search-box">
-      <input type="text" placeholder="search here...">
-      <i class="bx bx-search"></i>
-    </div>
-
-    <div class="icons">
-      <a href="favorites.html">
-        <i class='bx bx-heart'></i>
-      </a>
-    
-      <a href="cart.html">
-        <i class='bx bx-cart'></i>
-      </a>
-    
-      <a href="account.html">
-        <i class='bx bx-user'></i>
-      </a>
-    </div>
-  </div>
-
-  <nav class="bottom-nav">
-    <a href="index.html">Home</a>
-    <a href="index.html#featured">Featured</a>
-    <a class="active" href="library.html">Library</a>
-    <a href="index.html#reviews">Reviews</a>
-  </nav>
-</header>
+  <section id="header"></section>
+  <script src="/js/include.js"></script>
 
 
 <section class="library-section">
@@ -89,7 +60,7 @@
 
     <div class="book-card">
       <div class="book-image">
-        <img src="images/book.png" alt="book">
+        <img src="../images/book.png" alt="book">
         <i class="bx bx-heart"></i>
       </div>
       <h3>The Grammar of English</h3>
@@ -103,7 +74,7 @@
 
     <div class="book-card">
       <div class="book-image">
-        <img src="images/book.png" alt="book">
+        <img src="../images/book.png" alt="book">
         <i class="bx bx-heart"></i>
       </div>
       <h3>The Grammar of English</h3>
@@ -117,7 +88,7 @@
 
     <div class="book-card">
       <div class="book-image">
-        <img src="images/book.png" alt="book">
+        <img src="../images/book.png" alt="book">
         <i class="bx bx-heart"></i>
       </div>
       <h3>The Grammar of English</h3>
@@ -131,7 +102,7 @@
 
     <div class="book-card">
       <div class="book-image">
-        <img src="images/book.png" alt="book">
+        <img src="../images/book.png" alt="book">
         <i class="bx bx-heart"></i>
       </div>
       <h3>The Grammar of English</h3>
@@ -145,7 +116,7 @@
 
     <div class="book-card">
       <div class="book-image">
-        <img src="images/book.png" alt="book">
+        <img src="../images/book.png" alt="book">
         <i class="bx bx-heart"></i>
       </div>
       <h3>The Grammar of English</h3>
@@ -159,7 +130,7 @@
 
     <div class="book-card">
       <div class="book-image">
-        <img src="images/book.png" alt="book">
+        <img src="../images/book.png" alt="book">
         <i class="bx bx-heart"></i>
       </div>
       <h3>Start With Why</h3>
@@ -173,7 +144,7 @@
 
     <div class="book-card">
       <div class="book-image">
-        <img src="images/book.png" alt="book">
+        <img src="../images/book.png" alt="book">
         <i class="bx bx-heart"></i>
       </div>
       <h3>May It Please The Court</h3>
@@ -187,7 +158,7 @@
 
     <div class="book-card">
       <div class="book-image">
-        <img src="images/book.png" alt="book">
+        <img src="../images/book.png" alt="book">
         <i class="bx bx-heart"></i>
       </div>
       <h3>The Lean Startup</h3>
@@ -204,67 +175,7 @@
 </section>
 
 
-<footer class="footer">
-
-  <div class="footer-top">
-
-    <div class="footer-col">
-      <h3>Our Locations</h3>
-      <ul>
-        <li><i class="bx bx-map"></i> India</li>
-        <li><i class="bx bx-map"></i> USA</li>
-        <li><i class="bx bx-map"></i> Russia</li>
-        <li><i class="bx bx-map"></i> France</li>
-        <li><i class="bx bx-map"></i> Japan</li>
-        <li><i class="bx bx-map"></i> Africa</li>
-      </ul>
-    </div>
-
-    <div class="footer-col">
-      <h3>Quick Links</h3>
-      <ul>
-        <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
-        <li><i class="bx bx-chevron-right"></i> <a href="index.html#featured">Featured</a></li>
-        <li><i class="bx bx-chevron-right"></i> <a href="#">Library</a></li>
-        <li><i class="bx bx-chevron-right"></i> <a href="index.html#reviews">Reviews</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-col">
-      <h3>Extra Links</h3>
-      <ul>
-        <li><i class="bx bx-chevron-right"></i> <a href="/account.html">Account Info</a></li>
-        <li><i class="bx bx-chevron-right"></i> <a href="/orders.html">Ordered Items</a></li>
-        <li><i class="bx bx-chevron-right"></i> <a href="/privacy.html">Privacy Policy</a></li>
-        <li><i class="bx bx-chevron-right"></i> <a href="/payment.html">Payment Method</a></li>
-        <li><i class="bx bx-chevron-right"></i> <a href="/services.html">Our Services</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-col">
-      <h3>Contact Info</h3>
-      <ul>
-        <li><i class="bx bx-phone"></i> +7776-777-77777</li>
-        <li><i class="bx bx-phone"></i> +7777-666-6666</li>
-        <li><i class="bx bx-envelope"></i> bookify@gmail.com</li>
-      </ul>
-    </div>
-
-  </div>
-
-  <div class="footer-socials">
-    <a href="#" class="circle"><i class="bx bxl-facebook"></i></a>
-    <a href="#" class="circle"><i class="bx bxl-twitter"></i></a>
-    <a href="#" class="circle"><i class="bx bxl-instagram"></i></a>
-    <a href="#" class="circle"><i class="bx bxl-linkedin"></i></a>
-    <a href="#" class="circle"><i class="bx bxl-pinterest"></i></a>
-  </div>
-
-  <div class="footer-bottom">
-    <span class="brand-text">Bookify</span> | All Rights Reserved!
-  </div>
-
-</footer>
+<section id="footer"></section>
 
 </body>
 </html>
