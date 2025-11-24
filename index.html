@@ -1,6 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookify</title>
+
   <link rel="stylesheet" href="styles/variables.css">
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/layout/header.css">
@@ -9,53 +13,51 @@
   <link rel="stylesheet" href="styles/components/cards.css">
   <link rel="stylesheet" href="styles/pages/home.css">
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-
 </head>
+
 <body>
-  <header class="header-fixed">
-    <div class="top-nav">
-        <div class="logo">Bookify</div>
 
-        <div class="search-box">
-            <input type="text" placeholder="search here...">
-            <i class='bx bx-search'></i>
-        </div>
+<header class="header-fixed">
+  <div class="top-nav">
+    <div class="logo">Bookify</div>
 
-        <div class="icons">
-            <i class='bx bx-heart'></i>
-            <i class='bx bx-cart'></i>
-            <i class='bx bx-user'></i>
-        </div>
+    <div class="search-box">
+      <input type="text" placeholder="search here...">
+      <i class='bx bx-search'></i>
     </div>
 
-    <nav class="bottom-nav">
-        <a href="#">Home</a>
-        <a href="#featured">Featured</a>
-        <a href="library.html">Library</a>
-        <a href="#reviews">Reviews</a>
-        <a href="favorites.html">Favorites</a>
-    </nav>
+    <div class="icons">
+      <i class='bx bx-heart'></i>
+      <i class='bx bx-cart'></i>
+      <i class='bx bx-user'></i>
+    </div>
+  </div>
+
+  <nav class="bottom-nav">
+    <a href="#">Home</a>
+    <a href="#featured">Featured</a>
+    <a href="library.html">Library</a>
+    <a href="#reviews">Reviews</a>
+    <a href="favorites.html">Favorites</a>
+  </nav>
 </header>
 
 
 <section class="hero">
-
   <div class="hero-left">
     <h1>Upto 75% Off</h1>
     <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Magnam Deserunt
        Nostrum Accusamus. Nam Alias Sit Necessitatibus, Aliquid Ex Minima At!</p>
-
     <button class="btn-primary">Shop Now</button>
   </div>
 
   <div class="hero-right">
-    <img src="images/hero.png" alt="books" class="hero-books" width="500px">
+    <img src="images/hero.png" alt="books" class="hero-books" width="500">
   </div>
-
 </section>
 
-<section class="features">
 
+<section class="features">
   <div class="feature-item">
     <i class='bx bxs-truck'></i>
     <div>
@@ -87,39 +89,19 @@
       <p>Call Us Anytime</p>
     </div>
   </div>
-
 </section>
 
-<section class="featured-books" id="featured">
 
+<section class="featured-books" id="featured">
   <h2 class="section-title">Featured Books</h2>
 
   <div class="books-row">
 
-    <!-- BOOK CARD 1 -->
     <div class="book-card">
       <div class="book-image">
         <img src="images/book.png" alt="book">
         <i class='bx bx-heart'></i>
       </div>
-
-      <h3>Featured Book</h3>
-
-      <div class="price">
-        <span class="current">$15.99</span>
-        <span class="old">$20.99</span>
-      </div>
-
-      <button class="btn-add">Add To Cart</button>
-    </div>
-
-    <!-- BOOK CARD 2 -->
-    <div class="book-card">
-      <div class="book-image">
-        <img src="images/book.png" alt="book">
-        <i class='bx bx-heart'></i>
-      </div>
-
       <h3>Featured Book</h3>
       <div class="price">
         <span class="current">$15.99</span>
@@ -128,13 +110,11 @@
       <button class="btn-add">Add To Cart</button>
     </div>
 
-    <!-- BOOK CARD 3 -->
     <div class="book-card">
       <div class="book-image">
         <img src="images/book.png" alt="book">
         <i class='bx bx-heart'></i>
       </div>
-
       <h3>Featured Book</h3>
       <div class="price">
         <span class="current">$15.99</span>
@@ -143,13 +123,11 @@
       <button class="btn-add">Add To Cart</button>
     </div>
 
-    <!-- BOOK CARD 4 -->
     <div class="book-card">
       <div class="book-image">
         <img src="images/book.png" alt="book">
         <i class='bx bx-heart'></i>
       </div>
-
       <h3>Featured Book</h3>
       <div class="price">
         <span class="current">$15.99</span>
@@ -157,12 +135,12 @@
       </div>
       <button class="btn-add">Add To Cart</button>
     </div>
+
     <div class="book-card">
       <div class="book-image">
         <img src="images/book.png" alt="book">
         <i class='bx bx-heart'></i>
       </div>
-
       <h3>Featured Book</h3>
       <div class="price">
         <span class="current">$15.99</span>
@@ -170,12 +148,25 @@
       </div>
       <button class="btn-add">Add To Cart</button>
     </div>
+
     <div class="book-card">
       <div class="book-image">
         <img src="images/book.png" alt="book">
         <i class='bx bx-heart'></i>
       </div>
+      <h3>Featured Book</h3>
+      <div class="price">
+        <span class="current">$15.99</span>
+        <span class="old">$20.99</span>
+      </div>
+      <button class="btn-add">Add To Cart</button>
+    </div>
 
+    <div class="book-card">
+      <div class="book-image">
+        <img src="images/book.png" alt="book">
+        <i class='bx bx-heart'></i>
+      </div>
       <h3>Featured Book</h3>
       <div class="price">
         <span class="current">$15.99</span>
@@ -185,34 +176,28 @@
     </div>
 
   </div>
-
 </section>
+
 
 <section class="subscribe-section">
-
   <div class="subscribe-right">
     <h2>Subscribe For Latest Updates</h2>
-
     <input type="email" placeholder="Enter your email..." class="subscribe-input">
-
     <button class="subscribe-btn">Subscribe</button>
   </div>
-
 </section>
 
-<section class="reviews-section" id="reviews">
 
+<section class="reviews-section" id="reviews">
   <h2 class="section-title">Client's Reviews</h2>
 
   <div class="reviews-row">
 
-    <!-- CARD 1 -->
     <div class="review-card">
       <img class="review-avatar" src="images/avatar.png" alt="client">
       <h3>John Deo</h3>
-      <p>Lorem Ipsum Dolor, Sit Amet Consectetur Adipisicing Elit. Aspernatur Nihil Ipsa Placeat.
+      <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Aspernatur Nihil Ipsa Placeat.
          Aperiam At Sint, Eos Ex Similique Facere Hic.</p>
-
       <div class="stars">
         <i class='bx bxs-star'></i>
         <i class='bx bxs-star'></i>
@@ -222,13 +207,11 @@
       </div>
     </div>
 
-    <!-- CARD 2 -->
     <div class="review-card">
       <img class="review-avatar" src="images/avatar.png" alt="client">
       <h3>John Deo</h3>
-      <p>Lorem Ipsum Dolor, Sit Amet Consectetur Adipisicing Elit. Aspernatur Nihil Ipsa Placeat.
+      <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Aspernatur Nihil Ipsa Placeat.
          Aperiam At Sint, Eos Ex Similique Facere Hic.</p>
-
       <div class="stars">
         <i class='bx bxs-star'></i>
         <i class='bx bxs-star'></i>
@@ -238,13 +221,11 @@
       </div>
     </div>
 
-    <!-- CARD 3 -->
     <div class="review-card">
       <img class="review-avatar" src="images/avatar.png" alt="client">
       <h3>John Deo</h3>
-      <p>Lorem Ipsum Dolor, Sit Amet Consectetur Adipisicing Elit. Aspernatur Nihil Ipsa Placeat.
+      <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Aspernatur Nihil Ipsa Placeat.
          Aperiam At Sint, Eos Ex Similique Facere Hic.</p>
-
       <div class="stars">
         <i class='bx bxs-star'></i>
         <i class='bx bxs-star'></i>
@@ -255,13 +236,12 @@
     </div>
 
   </div>
-
 </section>
-<footer class="footer">
 
+
+<footer class="footer">
   <div class="footer-top">
 
-    <!-- LOCATIONS -->
     <div class="footer-col">
       <h3>Our Locations</h3>
       <ul>
@@ -274,31 +254,27 @@
       </ul>
     </div>
 
-    <!-- QUICK LINKS -->
     <div class="footer-col">
       <h3>Quick Links</h3>
       <ul>
         <li><i class='bx bx-chevron-right'></i> <a href="#">Home</a></li>
-    <li><i class='bx bx-chevron-right'></i> <a href="#featured">Featured</a></li>
-    <li><i class='bx bx-chevron-right'></i> <a href="#">Library</a></li>
-    <li><i class='bx bx-chevron-right'></i> <a href="#reviews">Reviews</a></li>
-    
+        <li><i class='bx bx-chevron-right'></i> <a href="#featured">Featured</a></li>
+        <li><i class='bx bx-chevron-right'></i> <a href="#">Library</a></li>
+        <li><i class='bx bx-chevron-right'></i> <a href="#reviews">Reviews</a></li>
       </ul>
     </div>
 
-    <!-- EXTRA LINKS -->
     <div class="footer-col">
       <h3>Extra Links</h3>
       <ul>
         <li><i class='bx bx-chevron-right'></i> <a href="/account.html">Account Info</a></li>
-    <li><i class='bx bx-chevron-right'></i> <a href="/orders.html">Ordered Items</a></li>
-    <li><i class='bx bx-chevron-right'></i> <a href="/privacy.html">Privacy Policy</a></li>
-    <li><i class='bx bx-chevron-right'></i> <a href="/payment.html">Payment Method</a></li>
-    <li><i class='bx bx-chevron-right'></i> <a href="/services.html">Our Services</a></li>
+        <li><i class='bx bx-chevron-right'></i> <a href="/orders.html">Ordered Items</a></li>
+        <li><i class='bx bx-chevron-right'></i> <a href="/privacy.html">Privacy Policy</a></li>
+        <li><i class='bx bx-chevron-right'></i> <a href="/payment.html">Payment Method</a></li>
+        <li><i class='bx bx-chevron-right'></i> <a href="/services.html">Our Services</a></li>
       </ul>
     </div>
 
-    <!-- CONTACT INFO -->
     <div class="footer-col">
       <h3>Contact Info</h3>
       <ul>
@@ -306,8 +282,6 @@
         <li><i class='bx bx-phone'></i> +7777-666-6666</li>
         <li><i class='bx bx-envelope'></i> bookify@gmail.com</li>
       </ul>
-
-     
     </div>
 
   </div>
@@ -323,16 +297,7 @@
   <div class="footer-bottom">
     <span class="brand-text">Bookify</span> | All Rights Reserved!
   </div>
-
 </footer>
-
-
-
-
-
-
-
-
 
 </body>
 </html>
