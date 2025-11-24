@@ -47,6 +47,11 @@
   color: var(--text-muted);
   cursor: pointer;
 }
+.icons a {
+  position: relative;
+  z-index: 20;
+  text-decoration: none;
+}
 
 .icons i {
   font-size: 1.6rem;
