@@ -153,3 +153,66 @@
 .subscribe-btn:hover {
   background: var(--brand-hover);
 }
+/*REVIEWS SECTION*/
+.reviews-section {
+  padding: 4rem 2rem;
+  background: var(--bg-main);
+}
+
+/* TITLE */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 3rem;
+}
+
+/* ROW */
+.reviews-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/* CARD */
+.review-card {
+  flex: 1;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+}
+
+/* AVATAR */
+.review-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+/* NAME */
+.review-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 1rem;
+}
+
+/* TEXT */
+.review-card p {
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+/* STARS */
+.stars i {
+  color: var(--brand);
+  font-size: 1.2rem;
+}
+
