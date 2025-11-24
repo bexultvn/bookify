@@ -1,0 +1,83 @@
+.footer {
+    background: var(--bg-card);
+    padding: 3rem 2rem;
+    border-top: 1px solid var(--border);
+}
+
+/* TOP PART */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    gap: 2rem;
+}
+
+.footer-col h3 {
+    color: var(--text-main);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin: .5rem 0;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.footer-col ul li i {
+    color: var(--brand);
+    font-size: 1.2rem;
+}
+.footer-col ul li a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.footer-col ul li a:hover {
+    color: var(--brand);
+}
+
+
+
+
+/* SOCIAL ICONS */
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0 2rem 0;
+}
+
+.circle {
+    width: 45px;
+    height: 45px;
+    background: var(--brand);
+    color: var(--text-on-brand);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .2s ease;
+}
+
+.circle:hover {
+    background: var(--brand-hover);
+}
+
+/* BOTTOM TEXT */
+.footer-bottom {
+    text-align: center;
+    color: var(--text-muted);
+}
+
+.brand-text {
+    color: var(--brand);
+    font-weight: 600;
+}
