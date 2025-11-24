@@ -80,9 +80,11 @@
   display: flex;
   gap: 2rem;
   overflow-x: auto;
-  padding-bottom: 1rem;
+  padding: 0 1.5rem 1rem;
   scroll-behavior: smooth;
-  width: 80%;
+  width: min(1100px, 90vw);
+  margin: 0 auto;
+  justify-content: flex-start;
 }
 
 .books-row::-webkit-scrollbar {
@@ -97,7 +99,6 @@
 .books-row::-webkit-scrollbar-track {
   background: var(--bg-muted);
 }
-
 
 
 
