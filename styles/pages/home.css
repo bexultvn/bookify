@@ -101,6 +101,55 @@
 }
 
 
+/*SUBSCRIBE SECTION*/
+.subscribe-section {
+  display: flex;
+  justify-content: flex-end; /* контент справа */
+  padding: 3rem 4rem;        /* большой правый отступ */
+  background: var(--bg-card); /* чистый белый фон */
+  height: 300px; /* высота как у секции с фото, можешь менять */
+  align-items: center;
+}
 
+/* RIGHT SIDE ONLY */
+.subscribe-right {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
 
+.subscribe-right h2 {
+  color: var(--text-main);
+  font-size: 1.8rem;
+  font-weight: 700;
+}
 
+/* INPUT */
+.subscribe-input {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-size: 1rem;
+}
+
+/* BUTTON */
+.subscribe-btn {
+  width: fit-content;
+  padding: 0.8rem 2rem;
+  background: var(--brand);
+  color: var(--text-on-brand);
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.subscribe-btn:hover {
+  background: var(--brand-hover);
+}
