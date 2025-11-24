@@ -1,0 +1,15 @@
+:root {
+  --brand: #DB5408;
+  --brand-hover: #B74206;
+
+  --bg-main: #FFF8F0;
+  --bg-card: #FFFFFF;
+  --bg-muted: #F3E3D6;
+
+  --text-main: #1F1B16;
+  --text-muted: #6D5C4A;
+  --text-on-brand: #FFFFFF;
+
+  --border: #E1D3C4;
+  --shadow-soft: 0 4px 12px rgba(0,0,0,0.08);
+}

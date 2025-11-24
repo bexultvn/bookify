@@ -1,0 +1,12 @@
+header {
+  background: var(--bg-card);
+  padding: 1rem 0;
+  box-shadow: var(--shadow-soft);
+}
+
+nav a {
+  color: var(--text-main);
+  text-decoration: none;
+  font-weight: 600;
+  margin-right: 1rem;
+}
