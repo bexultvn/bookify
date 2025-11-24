@@ -1,0 +1,32 @@
+.library-section {
+    padding: 5rem 2rem;
+    background: var(--bg-main);
+}
+
+.filters-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.genres label {
+    margin-right: 1rem;
+    font-size: .9rem;
+    color: var(--text-main);
+}
+
+.author-filter select {
+    padding: .6rem 1rem;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    color: var(--text-main);
+}
+
+.library-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 2rem;
+}
