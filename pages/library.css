@@ -62,7 +62,7 @@ body {
 }
 
 @media (max-width: 992px) {
-  body { padding-top: 170px; }
+  body { padding-top: 120px; }
 
   .filters-container {
     flex-direction: column;
@@ -99,7 +99,7 @@ body {
 }
 
 @media (max-width: 576px) {
-  body { padding-top: 190px; }
+  body { padding-top: 110px; }
 
   .library-section {
     padding: 3rem 0;

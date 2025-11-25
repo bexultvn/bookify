@@ -61,7 +61,7 @@
   .book-image { height: 170px; }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
   .book-card { max-width: 160px; min-width: 140px; }
   .book-image { height: 150px; }
 }

@@ -274,7 +274,7 @@ html, body {
   .review-card { padding: 1.5rem; }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
   .hero-left h1 { font-size: 1.7rem; }
 
   .book-card { min-width: 140px; }

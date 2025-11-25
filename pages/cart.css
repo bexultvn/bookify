@@ -190,7 +190,7 @@ body {
 }
 
 @media (max-width: 992px) {
-  body { padding-top: 170px; }
+  body { padding-top: 120px; }
 
   .cart-container {
     flex-direction: column;
@@ -237,7 +237,7 @@ body {
 }
 
 @media (max-width: 576px) {
-  body { padding-top: 190px; }
+  body { padding-top: 110px; }
 
   .cart-item {
     padding: 16px;

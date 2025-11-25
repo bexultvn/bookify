@@ -25,6 +25,8 @@
 
 .footer-col ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .footer-col ul li {
@@ -38,6 +40,9 @@
 .footer-col ul li i {
   color: var(--brand);
   font-size: 1.2rem;
+  width: 1.4rem;
+  display: inline-flex;
+  justify-content: center;
 }
 
 .footer-col ul li a {
@@ -87,14 +92,21 @@
 }
 
 @media (max-width: 576px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
   .footer-col {
     width: 100%;
+    max-width: 420px;
     text-align: center;
   }
   .footer-col ul li { justify-content: center; }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
   .circle {
     width: 38px;
     height: 38px;

@@ -158,7 +158,7 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
   .logo { font-size: 1.1rem; }
   .actions i { font-size: 1.25rem; }
 }
