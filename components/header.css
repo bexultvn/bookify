@@ -86,3 +86,73 @@
   color: var(--text-on-brand);
   opacity: 0.85;
 }
+/* ============ 1200px ============ */
+@media (max-width: 1200px) {
+  .search-box {
+    width: 35%;
+  }
+}
+
+/* ============ 992px TABLETS ============ */
+@media (max-width: 992px) {
+  .search-box {
+    width: 45%;
+  }
+
+  .top-nav {
+    padding: 1rem;
+  }
+
+  .icons i {
+    font-size: 1.4rem;
+  }
+}
+
+/* ============ 768px LARGE PHONES ============ */
+@media (max-width: 768px) {
+
+  /* hide nav — optional */
+  .bottom-nav {
+    gap: 1.2rem;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
+
+  .search-box {
+    width: 55%;
+  }
+}
+
+/* ============ 576px MOBILE ============ */
+@media (max-width: 576px) {
+
+  .top-nav {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .icons i {
+    margin-left: 0.4rem;
+  }
+
+  .bottom-nav {
+    gap: 1rem;
+    font-size: 0.75rem;
+    padding: 0.5rem;
+  }
+}
+
+/* ============ 400px SMALL MOBILE ============ */
+@media (max-width: 400px) {
+  .logo {
+    font-size: 1.1rem;
+  }
+
+  .icons i {
+    font-size: 1.3rem;
+  }
+}

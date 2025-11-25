@@ -81,3 +81,34 @@
     color: var(--brand);
     font-weight: 600;
 }
+/* ============ 992px ============ */
+@media (max-width: 992px) {
+    .footer-top {
+      flex-wrap: wrap;
+    }
+  
+    .footer-col {
+      width: 45%;
+    }
+  }
+  
+  /* ============ 576px ============ */
+  @media (max-width: 576px) {
+    .footer-col {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .footer-col ul li {
+      justify-content: center;
+    }
+  }
+  
+  /* ============ 400px ============ */
+  @media (max-width: 400px) {
+    .circle {
+      width: 38px;
+      height: 38px;
+    }
+  }
+  

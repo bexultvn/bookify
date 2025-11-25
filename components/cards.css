@@ -64,3 +64,24 @@
   text-decoration: line-through;
   color: var(--text-muted);
 }
+/* ============ 576px ============ */
+@media (max-width: 576px) {
+  .book-card {
+    min-width: 180px;
+  }
+
+  .book-image {
+    height: 180px;
+  }
+}
+
+/* ============ 400px ============ */
+@media (max-width: 400px) {
+  .book-card {
+    min-width: 160px;
+  }
+
+  .book-image {
+    height: 160px;
+  }
+}

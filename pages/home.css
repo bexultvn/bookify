@@ -216,3 +216,171 @@
   font-size: 1.2rem;
 }
 
+
+/* ===============================
+    GLOBAL FIX — УБИРАЕМ
+    ГОРИЗОНТАЛЬНЫЙ СКРОЛЛ
+=============================== */
+html, body {
+  overflow-x: hidden;
+}
+
+/* =============== 1200px =============== */
+@media (max-width: 1200px) {
+  .hero {
+    padding: 3rem 1.5rem;
+  }
+
+  .hero-left h1 {
+    font-size: 2.6rem;
+  }
+
+  .books-row {
+    width: 100%;
+  }
+}
+
+/* =============== 992px =============== */
+@media (max-width: 992px) {
+
+  /* HERO */
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-left,
+  .hero-right {
+    width: 100%;
+  }
+
+  .hero-right img {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  /* FEATURES */
+  .features {
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+
+  /* REVIEWS */
+  .reviews-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .review-card {
+    width: 100%;
+    max-width: 420px;
+  }
+}
+
+/* =============== 768px =============== */
+@media (max-width: 768px) {
+
+  /* HEADER SEARCH BOX */
+  .search-box {
+    width: 60%;
+  }
+
+  /* HERO */
+  .hero-left h1 {
+    font-size: 2.2rem;
+  }
+
+  /* FEATURES */
+  .feature-item h3 {
+    font-size: 1.1rem;
+  }
+  .feature-item p {
+    font-size: .85rem;
+  }
+
+  /* BOOK CARDS */
+  .book-card {
+    min-width: 180px;
+  }
+  .book-image {
+    height: 180px;
+  }
+
+  /* FOOTER */
+  .footer-top {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-col ul li {
+    justify-content: center;
+  }
+}
+
+/* =============== 576px =============== */
+@media (max-width: 576px) {
+
+  .hero-left h1 {
+    font-size: 1.9rem;
+  }
+
+  .hero-left p {
+    font-size: .9rem;
+  }
+
+  /* SUBSCRIBE */
+  .subscribe-section {
+    padding: 2rem;
+  }
+
+  .subscribe-right {
+    width: 100%;
+  }
+
+  /* BOOK ROW FIX */
+  .books-row {
+    gap: 1rem;
+  }
+
+  .book-card {
+    min-width: 150px;
+  }
+
+  /* REVIEW */
+  .review-card {
+    padding: 1.5rem;
+  }
+}
+
+/* =============== 420px =============== */
+@media (max-width: 420px) {
+
+  /* HEADER */
+  .top-nav {
+    padding: .7rem 1rem;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .icons i {
+    margin-left: .5rem;
+    font-size: 1.3rem;
+  }
+
+  /* HERO */
+  .hero-left h1 {
+    font-size: 1.7rem;
+  }
+
+  /* CARD */
+  .book-card {
+    min-width: 140px;
+  }
+
+  .book-image {
+    height: 160px;
+  }
+}
