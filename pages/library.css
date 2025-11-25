@@ -7,11 +7,15 @@ body {
 }
 
 .library-section {
-  padding: 4rem 2rem;
+  padding: 4rem var(--page-gutter);
   background: var(--bg-main);
   width: 100%;
+}
+
+.library-section > * {
   max-width: 1200px;
   margin: 0 auto;
+  width: 100%;
 }
 
 .filters-container {
@@ -53,7 +57,7 @@ body {
 
 @media (max-width: 1200px) {
   .library-section {
-    padding: 3rem 1.5rem;
+    padding: 3rem 0;
   }
 }
 
@@ -98,7 +102,7 @@ body {
   body { padding-top: 190px; }
 
   .library-section {
-    padding: 3rem 1.2rem;
+    padding: 3rem 0;
   }
 
   .genres {

@@ -7,13 +7,11 @@ body {
 }
 
 .cart-section {
-  padding: 3rem 2rem 4rem;
+  padding: 3rem var(--page-gutter) 4rem;
   background: var(--bg-main);
   min-height: 100vh;
   color: var(--text-main);
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .cart-title {
@@ -28,6 +26,8 @@ body {
   align-items: flex-start;
   flex-wrap: wrap;
   width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   justify-content: center;
 }
 
@@ -252,9 +252,7 @@ body {
     height: 28px;
   }
 
-  .cart-summary {
-    padding: 20px;
-  }
+  .cart-summary { padding: 20px; }
 }
 
 @media (max-width: 420px) {

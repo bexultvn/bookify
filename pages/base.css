@@ -9,6 +9,7 @@ body {
   font-family: system-ui, sans-serif;
   line-height: 1.6;
   padding-top: 140px;
+  padding-inline: 0;
 }
 
 html {

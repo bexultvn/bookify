@@ -10,7 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 2rem;
+  padding: 1rem var(--page-gutter);
   background: var(--bg-card);
   box-shadow: var(--shadow-soft);
   gap: 1rem;
@@ -91,7 +91,7 @@
   display: flex;
   justify-content: center;
   background: var(--brand);
-  padding: 0.7rem 2rem;
+  padding: 0.7rem var(--page-gutter);
   gap: 2rem;
   flex-wrap: wrap;
 }
@@ -109,13 +109,13 @@
 
 @media (max-width: 992px) {
   .search-box { width: 45%; }
-  .top-nav { padding: 1rem; }
+  .top-nav { padding: 1rem var(--page-gutter); }
   .actions i { font-size: 1.3rem; }
 }
 
 @media (max-width: 768px) {
   .top-nav {
-    padding: 0.9rem 1rem;
+    padding: 0.9rem var(--page-gutter);
     flex-wrap: wrap;
   }
 
@@ -143,7 +143,7 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
-    padding: 0.85rem 1rem;
+    padding: 0.85rem var(--page-gutter);
     box-shadow: inset 0 1px 0 var(--border);
   }
 

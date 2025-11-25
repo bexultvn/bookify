@@ -6,11 +6,9 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 4rem 2rem;
+  padding: 4rem var(--page-gutter);
   background: var(--bg-main);
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
   gap: 2rem;
 }
 
@@ -46,12 +44,10 @@ html, body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem 2rem;
+  padding: 3rem var(--page-gutter);
   background: var(--bg-card);
   flex-wrap: nowrap;
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
   gap: 1.5rem;
 }
 
@@ -90,11 +86,9 @@ html, body {
   display: flex;
   gap: 2rem;
   overflow-x: auto;
-  padding: 0 1.5rem 1rem;
+  padding: 0 var(--page-gutter) 1rem;
   scroll-behavior: smooth;
   width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
   justify-content: flex-start;
 }
 
@@ -114,13 +108,12 @@ html, body {
 .subscribe-section {
   display: flex;
   justify-content: center;
-  padding: 3rem 2rem;
+  padding: 3rem 0;
   background: var(--bg-card);
   height: auto;
   align-items: center;
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding-inline: var(--page-gutter);
 }
 
 .subscribe-right {
@@ -162,11 +155,9 @@ html, body {
 }
 
 .reviews-section {
-  padding: 4rem 2rem;
+  padding: 4rem var(--page-gutter);
   background: var(--bg-main);
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .reviews-row {

@@ -1,6 +1,7 @@
 :root {
   --brand: #DB5408;
   --brand-hover: #B74206;
+  --page-gutter: clamp(1.25rem, 4vw, 5.5rem);
 
   --bg-main: #FFF8F0;
   --bg-card: #FFFFFF;
