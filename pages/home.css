@@ -1,10 +1,24 @@
-/*HERO*/
+/* ===============================
+   GLOBAL FIX — REMOVE SCROLL-X
+=============================== */
+html, body {
+  overflow-x: hidden;
+}
+
+
+/* ===============================
+            HERO
+=============================== */
 .hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 4rem 2rem;
   background: var(--bg-main);
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
 }
 
 .hero-left {
@@ -34,19 +48,30 @@
   max-width: 100%;
   border-radius: 4px;
 }
-/*FEATURES*/
+
+
+
+/* ===============================
+           FEATURES
+=============================== */
 .features {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 3rem 2rem;
   background: var(--bg-card);
+  flex-wrap: nowrap;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 1.5rem;
 }
 
 .feature-item {
   display: flex;
   align-items: center;
   gap: 1rem;
+  min-width: 180px;
 }
 
 .feature-item i {
@@ -58,15 +83,18 @@
   font-size: 1.2rem;
   font-weight: 700;
   color: var(--text-main);
-  margin-bottom: .3rem;
 }
 
 .feature-item p {
   font-size: .9rem;
   color: var(--text-muted);
 }
-/*FEATURED BOOKS*/
-/* SECTION TITLE */
+
+
+
+/* ===============================
+         FEATURED BOOKS
+=============================== */
 .section-title {
   text-align: center;
   font-size: 2rem;
@@ -75,14 +103,14 @@
   margin-bottom: 2rem;
 }
 
-/* HORIZONTAL SCROLL */
 .books-row {
   display: flex;
   gap: 2rem;
   overflow-x: auto;
   padding: 0 1.5rem 1rem;
   scroll-behavior: smooth;
-  width: min(1100px, 90vw);
+  width: 100%;
+  max-width: 1100px;
   margin: 0 auto;
   justify-content: flex-start;
 }
@@ -101,81 +129,80 @@
 }
 
 
-/*SUBSCRIBE SECTION*/
+
+/* ===============================
+        SUBSCRIBE SECTION
+=============================== */
 .subscribe-section {
   display: flex;
-  justify-content: flex-end; /* контент справа */
-  padding: 3rem 4rem;        /* большой правый отступ */
-  background: var(--bg-card); /* чистый белый фон */
-  height: 300px; /* высота как у секции с фото, можешь менять */
+  justify-content: center;
+  padding: 3rem 2rem;
+  background: var(--bg-card);
+  height: auto;
   align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* RIGHT SIDE ONLY */
 .subscribe-right {
-  width: 40%;
+  width: 100%;
+  max-width: 520px;
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
+  text-align: center;
+  align-items: center;
 }
 
 .subscribe-right h2 {
-  color: var(--text-main);
   font-size: 1.8rem;
   font-weight: 700;
+  color: var(--text-main);
 }
 
-/* INPUT */
 .subscribe-input {
   width: 100%;
   padding: 0.9rem 1rem;
   border-radius: 6px;
   border: 1px solid var(--border);
   background: var(--bg-main);
-  color: var(--text-main);
-  font-size: 1rem;
 }
 
-/* BUTTON */
 .subscribe-btn {
   width: fit-content;
   padding: 0.8rem 2rem;
   background: var(--brand);
   color: var(--text-on-brand);
-  border: none;
   border-radius: 6px;
-  font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: 0.2s ease;
 }
 
 .subscribe-btn:hover {
   background: var(--brand-hover);
 }
-/*REVIEWS SECTION*/
+
+
+
+/* ===============================
+          REVIEWS
+=============================== */
 .reviews-section {
   padding: 4rem 2rem;
   background: var(--bg-main);
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* TITLE */
-.section-title {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--text-main);
-  margin-bottom: 3rem;
-}
-
-/* ROW */
 .reviews-row {
   display: flex;
   justify-content: space-between;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 
-/* CARD */
 .review-card {
   flex: 1;
   background: var(--bg-card);
@@ -186,16 +213,13 @@
   box-shadow: var(--shadow-soft);
 }
 
-/* AVATAR */
 .review-avatar {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  object-fit: cover;
   margin-bottom: 1rem;
 }
 
-/* NAME */
 .review-card h3 {
   font-size: 1.2rem;
   font-weight: 700;
@@ -203,67 +227,53 @@
   margin-bottom: 1rem;
 }
 
-/* TEXT */
 .review-card p {
   color: var(--text-muted);
   line-height: 1.6;
   margin-bottom: 1.2rem;
 }
 
-/* STARS */
 .stars i {
   color: var(--brand);
   font-size: 1.2rem;
 }
 
 
-/* ===============================
-    GLOBAL FIX — УБИРАЕМ
-    ГОРИЗОНТАЛЬНЫЙ СКРОЛЛ
-=============================== */
-html, body {
-  overflow-x: hidden;
-}
+
+/* ================================================
+   RESPONSIVE — UNIVERSAL BREAKPOINTS
+================================================ */
 
 /* =============== 1200px =============== */
 @media (max-width: 1200px) {
-  .hero {
-    padding: 3rem 1.5rem;
-  }
-
-  .hero-left h1 {
-    font-size: 2.6rem;
-  }
-
-  .books-row {
-    width: 100%;
-  }
+  .hero { padding: 3rem 1.5rem; }
+  .hero-left h1 { font-size: 2.6rem; }
+  .books-row { width: 100%; }
 }
 
-/* =============== 992px =============== */
+
+/* =============== 992px (TABLETS) =============== */
 @media (max-width: 992px) {
 
   /* HERO */
   .hero {
     flex-direction: column;
     text-align: center;
+    gap: 2rem;
   }
-
   .hero-left,
-  .hero-right {
-    width: 100%;
-  }
+  .hero-right { width: 100%; }
 
   .hero-right img {
+    max-width: 380px;
     width: 100%;
-    max-width: 400px;
   }
 
   /* FEATURES */
   .features {
     flex-wrap: wrap;
-    gap: 2rem;
     justify-content: center;
+    gap: 2rem;
   }
 
   /* REVIEWS */
@@ -271,116 +281,65 @@ html, body {
     flex-direction: column;
     align-items: center;
   }
-
   .review-card {
     width: 100%;
     max-width: 420px;
   }
-}
-
-/* =============== 768px =============== */
-@media (max-width: 768px) {
-
-  /* HEADER SEARCH BOX */
-  .search-box {
-    width: 60%;
-  }
-
-  /* HERO */
-  .hero-left h1 {
-    font-size: 2.2rem;
-  }
-
-  /* FEATURES */
-  .feature-item h3 {
-    font-size: 1.1rem;
-  }
-  .feature-item p {
-    font-size: .85rem;
-  }
-
-  /* BOOK CARDS */
-  .book-card {
-    min-width: 180px;
-  }
-  .book-image {
-    height: 180px;
-  }
-
-  /* FOOTER */
-  .footer-top {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .footer-col ul li {
-    justify-content: center;
-  }
-}
-
-/* =============== 576px =============== */
-@media (max-width: 576px) {
-
-  .hero-left h1 {
-    font-size: 1.9rem;
-  }
-
-  .hero-left p {
-    font-size: .9rem;
-  }
 
   /* SUBSCRIBE */
   .subscribe-section {
-    padding: 2rem;
+    padding: 2rem 2rem;
+    height: auto;
   }
-
   .subscribe-right {
     width: 100%;
   }
-
-  /* BOOK ROW FIX */
-  .books-row {
-    gap: 1rem;
-  }
-
-  .book-card {
-    min-width: 150px;
-  }
-
-  /* REVIEW */
-  .review-card {
-    padding: 1.5rem;
-  }
 }
 
-/* =============== 420px =============== */
-@media (max-width: 420px) {
 
-  /* HEADER */
-  .top-nav {
-    padding: .7rem 1rem;
-  }
+/* =============== 768px (LARGE PHONES) =============== */
+@media (max-width: 768px) {
 
-  .search-box {
-    width: 100%;
-  }
+  .hero-left h1 { font-size: 2.2rem; }
 
-  .icons i {
-    margin-left: .5rem;
-    font-size: 1.3rem;
-  }
+  /* FEATURES */
+  .feature-item h3 { font-size: 1.1rem; }
+  .feature-item p { font-size: .85rem; }
 
-  /* HERO */
-  .hero-left h1 {
-    font-size: 1.7rem;
-  }
+  /* BOOK CARDS IN SCROLL */
+  .books-row { gap: 1.2rem; }
+  .book-card { min-width: 170px; }
 
-  /* CARD */
-  .book-card {
-    min-width: 140px;
-  }
+  .subscribe-right { width: 100%; }
+}
 
-  .book-image {
-    height: 160px;
-  }
+
+
+/* =============== 576px (NORMAL PHONES) =============== */
+@media (max-width: 576px) {
+
+  .hero-left h1 { font-size: 1.9rem; }
+  .hero-left p { font-size: .9rem; }
+
+  .subscribe-section { padding: 2rem; }
+  .subscribe-right { width: 100%; }
+
+  .books-row { gap: 1rem; }
+  .book-card { min-width: 150px; }
+
+  .review-card { padding: 1.5rem; }
+}
+
+
+
+/* =============== 400px (SMALL PHONES) =============== */
+@media (max-width: 400px) {
+
+  .hero-left h1 { font-size: 1.7rem; }
+
+  .book-card { min-width: 140px; }
+
+  .book-image { height: 160px; }
+
+  .reviews-row { gap: 1.5rem; }
 }

@@ -1,23 +1,42 @@
-body{
-    padding-top: 70px;
-}
-.library-section {
-    padding: 5rem 2rem;
-    background: var(--bg-main);
+/* GLOBAL FIX */
+html, body {
+    overflow-x: hidden;
 }
 
+/* MAIN SECTION */
+body {
+    padding-top: 140px;
+}
+
+.library-section {
+    padding: 4rem 2rem;
+    background: var(--bg-main);
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* FILTERS */
 .filters-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2rem;
     flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.genres {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem 1.3rem;
+    width: 100%;
 }
 
 .genres label {
-    margin-right: 1rem;
     font-size: .9rem;
     color: var(--text-main);
+    white-space: nowrap;
 }
 
 .author-filter select {
@@ -28,8 +47,97 @@ body{
     color: var(--text-main);
 }
 
+/* GRID */
 .library-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
     gap: 2rem;
+    justify-items: center;
+}
+
+/* =======================================
+   BREAKPOINTS LIKE HOME/HEADER/FOOTER
+======================================== */
+
+/* =============== 1200px =============== */
+@media (max-width: 1200px) {
+    .library-section {
+        padding: 3rem 1.5rem;
+    }
+}
+
+/* =============== 992px =============== */
+@media (max-width: 992px) {
+
+    body { padding-top: 170px; }
+
+    .filters-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.4rem;
+    }
+
+    .author-filter {
+        width: 100%;
+    }
+
+    .author-filter select {
+        width: 100%;
+    }
+
+    .library-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+/* =============== 768px =============== */
+@media (max-width: 768px) {
+
+    .genres {
+        gap: 0.7rem 1rem;
+    }
+
+    .genres label {
+        font-size: .85rem;
+    }
+
+    .library-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 1.4rem;
+    }
+}
+
+/* =============== 576px =============== */
+@media (max-width: 576px) {
+
+    body { padding-top: 190px; }
+
+    .library-section {
+        padding: 3rem 1.2rem;
+    }
+
+    .genres {
+        gap: 0.6rem 0.8rem;
+    }
+
+    .library-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    }
+}
+
+/* =============== 420px =============== */
+@media (max-width: 420px) {
+
+    .genres label {
+        font-size: .8rem;
+    }
+
+    .library-grid {
+        grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
+        gap: 1rem;
+    }
+
+    .author-filter select {
+        font-size: .9rem;
+    }
 }

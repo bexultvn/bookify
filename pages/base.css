@@ -1,3 +1,7 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   background: var(--bg-main);
   color: var(--text-main);
@@ -13,4 +17,16 @@ html {
 
 h1,h2,h3 {
   font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 170px;
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+    padding-top: 190px;
+  }
 }

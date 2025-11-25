@@ -1,8 +1,12 @@
+/* ======================
+      HEADER BASE
+====================== */
 .header-fixed {
   position: fixed;
   inset: 0 0 auto 0;
   width: 100%;
   z-index: 1000;
+  background: var(--bg-card);
 }
 
 .top-nav {
@@ -18,11 +22,9 @@
   font-size: 1.4rem;
   font-weight: 700;
   color: var(--text-main);
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
 }
 
+/* SEARCH BOX */
 .search-box {
   position: relative;
   width: 40%;
@@ -34,7 +36,6 @@
   border-radius: 6px;
   border: 1px solid var(--border);
   background: var(--bg-main);
-  color: var(--text-main);
   font-size: 0.95rem;
 }
 
@@ -43,13 +44,13 @@
   right: 12px;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 1.2rem;
   color: var(--text-muted);
+  font-size: 1.2rem;
   cursor: pointer;
 }
+
+/* ICONS */
 .icons a {
-  position: relative;
-  z-index: 20;
   text-decoration: none;
 }
 
@@ -57,102 +58,72 @@
   font-size: 1.6rem;
   margin-left: 1rem;
   color: var(--text-main);
+  transition: 0.2s;
   cursor: pointer;
-  transition: 0.2s ease;
 }
 
 .icons i:hover {
   color: var(--brand);
 }
 
+/* BOTTOM NAV */
 .bottom-nav {
   display: flex;
   justify-content: center;
   background: var(--brand);
   padding: 0.7rem 2rem;
-  display: flex;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .bottom-nav a {
   color: var(--text-on-brand);
-  text-decoration: none;
   font-weight: 600;
+  text-decoration: none;
   font-size: 0.95rem;
-  transition: 0.2s ease;
 }
 
-.bottom-nav a:hover {
-  color: var(--text-on-brand);
-  opacity: 0.85;
-}
-/* ============ 1200px ============ */
+/* ======================
+      RESPONSIVE
+====================== */
+
+/* 1200px */
 @media (max-width: 1200px) {
-  .search-box {
-    width: 35%;
-  }
+  .search-box { width: 35%; }
 }
 
-/* ============ 992px TABLETS ============ */
+/* 992px */
 @media (max-width: 992px) {
-  .search-box {
-    width: 45%;
-  }
-
-  .top-nav {
-    padding: 1rem;
-  }
-
-  .icons i {
-    font-size: 1.4rem;
-  }
+  .search-box { width: 45%; }
+  .top-nav { padding: 1rem; }
+  .icons i { font-size: 1.4rem; }
 }
 
-/* ============ 768px LARGE PHONES ============ */
+/* 768px */
 @media (max-width: 768px) {
-
-  /* hide nav — optional */
   .bottom-nav {
     gap: 1.2rem;
-    font-size: 0.8rem;
     padding: 0.5rem;
   }
-
-  .search-box {
-    width: 55%;
-  }
+  .search-box { width: 55%; }
 }
 
-/* ============ 576px MOBILE ============ */
+/* 576px */
 @media (max-width: 576px) {
-
   .top-nav {
     flex-direction: column;
     gap: 0.8rem;
   }
-
-  .search-box {
-    width: 100%;
-  }
-
-  .icons i {
-    margin-left: 0.4rem;
-  }
-
+  .search-box { width: 100%; }
+  .icons i { margin-left: 0.5rem; }
   .bottom-nav {
-    gap: 1rem;
-    font-size: 0.75rem;
-    padding: 0.5rem;
+    gap: 0.9rem;
+    padding: 0.6rem 1rem;
   }
 }
 
-/* ============ 400px SMALL MOBILE ============ */
+/* 400px */
 @media (max-width: 400px) {
-  .logo {
-    font-size: 1.1rem;
-  }
-
-  .icons i {
-    font-size: 1.3rem;
-  }
+  .logo { font-size: 1.1rem; }
+  .icons i { font-size: 1.3rem; }
 }
