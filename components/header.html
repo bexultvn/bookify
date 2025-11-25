@@ -1,20 +1,30 @@
 <header class="header-fixed">
   <div class="top-nav">
-    <div class="logo">Bookify</div>
+    <div class="top-left">
+      <button class="icon-btn nav-toggle" type="button" aria-label="Toggle menu" data-nav-toggle>
+        <i class='bx bx-menu'></i>
+      </button>
+      <div class="logo">Bookify</div>
+    </div>
 
     <div class="search-box">
       <input type="text" placeholder="search here...">
       <i class='bx bx-search'></i>
     </div>
 
-    <div class="icons">
-      <a href="favorites.html">
+    <div class="actions">
+      <button class="icon-btn search-toggle" type="button" aria-label="Toggle search" data-search-toggle>
+        <i class='bx bx-search'></i>
+      </button>
+      <a href="favorites.html" class="icon-btn">
         <i class='bx bx-heart'></i>
       </a>
-      <a href="cart.html">
+      <a href="cart.html" class="icon-btn">
         <i class='bx bx-cart'></i>
       </a>
-      <i class='bx bx-user'></i>
+      <a href="account.html" class="icon-btn">
+        <i class='bx bx-user'></i>
+      </a>
     </div>
   </div>
 

@@ -13,12 +13,44 @@
   padding: 1rem 2rem;
   background: var(--bg-card);
   box-shadow: var(--shadow-soft);
+  gap: 1rem;
+}
+
+.top-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
 }
 
 .logo {
   font-size: 1.4rem;
   font-weight: 700;
   color: var(--text-main);
+}
+
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-main);
+  color: var(--text-main);
+  cursor: pointer;
+  transition: 0.2s;
+  text-decoration: none;
+}
+
+.icon-btn:hover {
+  color: var(--brand);
+  border-color: var(--brand);
+}
+
+.nav-toggle,
+.search-toggle {
+  display: none;
 }
 
 .search-box {
@@ -45,20 +77,14 @@
   cursor: pointer;
 }
 
-.icons a {
-  text-decoration: none;
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
 }
 
-.icons i {
-  font-size: 1.6rem;
-  margin-left: 1rem;
-  color: var(--text-main);
-  transition: 0.2s;
-  cursor: pointer;
-}
-
-.icons i:hover {
-  color: var(--brand);
+.actions i {
+  font-size: 1.4rem;
 }
 
 .bottom-nav {
@@ -84,31 +110,55 @@
 @media (max-width: 992px) {
   .search-box { width: 45%; }
   .top-nav { padding: 1rem; }
-  .icons i { font-size: 1.4rem; }
+  .actions i { font-size: 1.3rem; }
 }
 
 @media (max-width: 768px) {
-  .bottom-nav {
-    gap: 1.2rem;
-    padding: 0.5rem;
+  .top-nav {
+    padding: 0.9rem 1rem;
+    flex-wrap: wrap;
   }
-  .search-box { width: 55%; }
+
+  .nav-toggle,
+  .search-toggle {
+    display: inline-flex;
+  }
+
+  .search-box {
+    display: none;
+    width: 100%;
+    order: 3;
+  }
+
+  .header-fixed.search-open .search-box {
+    display: block;
+  }
+
+  .search-box input {
+    width: 100%;
+  }
+
+  .bottom-nav {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0.85rem 1rem;
+    box-shadow: inset 0 1px 0 var(--border);
+  }
+
+  .header-fixed.menu-open .bottom-nav {
+    display: flex;
+  }
 }
 
 @media (max-width: 576px) {
-  .top-nav {
-    flex-direction: column;
-    gap: 0.8rem;
-  }
-  .search-box { width: 100%; }
-  .icons i { margin-left: 0.5rem; }
-  .bottom-nav {
-    gap: 0.9rem;
-    padding: 0.6rem 1rem;
+  .actions {
+    gap: 0.4rem;
   }
 }
 
 @media (max-width: 400px) {
   .logo { font-size: 1.1rem; }
-  .icons i { font-size: 1.3rem; }
+  .actions i { font-size: 1.25rem; }
 }
