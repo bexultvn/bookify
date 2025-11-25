@@ -1,14 +1,7 @@
-/* ===============================
-   GLOBAL FIX — REMOVE SCROLL-X
-=============================== */
 html, body {
   overflow-x: hidden;
 }
 
-
-/* ===============================
-            HERO
-=============================== */
 .hero {
   display: flex;
   align-items: center;
@@ -49,11 +42,6 @@ html, body {
   border-radius: 4px;
 }
 
-
-
-/* ===============================
-           FEATURES
-=============================== */
 .features {
   display: flex;
   justify-content: space-between;
@@ -90,11 +78,6 @@ html, body {
   color: var(--text-muted);
 }
 
-
-
-/* ===============================
-         FEATURED BOOKS
-=============================== */
 .section-title {
   text-align: center;
   font-size: 2rem;
@@ -128,11 +111,6 @@ html, body {
   background: var(--bg-muted);
 }
 
-
-
-/* ===============================
-        SUBSCRIBE SECTION
-=============================== */
 .subscribe-section {
   display: flex;
   justify-content: center;
@@ -183,11 +161,6 @@ html, body {
   background: var(--brand-hover);
 }
 
-
-
-/* ===============================
-          REVIEWS
-=============================== */
 .reviews-section {
   padding: 4rem 2rem;
   background: var(--bg-main);
@@ -238,29 +211,19 @@ html, body {
   font-size: 1.2rem;
 }
 
-
-
-/* ================================================
-   RESPONSIVE — UNIVERSAL BREAKPOINTS
-================================================ */
-
-/* =============== 1200px =============== */
 @media (max-width: 1200px) {
   .hero { padding: 3rem 1.5rem; }
   .hero-left h1 { font-size: 2.6rem; }
   .books-row { width: 100%; }
 }
 
-
-/* =============== 992px (TABLETS) =============== */
 @media (max-width: 992px) {
-
-  /* HERO */
   .hero {
     flex-direction: column;
     text-align: center;
     gap: 2rem;
   }
+
   .hero-left,
   .hero-right { width: 100%; }
 
@@ -269,55 +232,45 @@ html, body {
     width: 100%;
   }
 
-  /* FEATURES */
   .features {
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
   }
 
-  /* REVIEWS */
   .reviews-row {
     flex-direction: column;
     align-items: center;
   }
+
   .review-card {
     width: 100%;
     max-width: 420px;
   }
 
-  /* SUBSCRIBE */
   .subscribe-section {
     padding: 2rem 2rem;
     height: auto;
   }
+
   .subscribe-right {
     width: 100%;
   }
 }
 
-
-/* =============== 768px (LARGE PHONES) =============== */
 @media (max-width: 768px) {
-
   .hero-left h1 { font-size: 2.2rem; }
 
-  /* FEATURES */
   .feature-item h3 { font-size: 1.1rem; }
   .feature-item p { font-size: .85rem; }
 
-  /* BOOK CARDS IN SCROLL */
   .books-row { gap: 1.2rem; }
   .book-card { min-width: 170px; }
 
   .subscribe-right { width: 100%; }
 }
 
-
-
-/* =============== 576px (NORMAL PHONES) =============== */
 @media (max-width: 576px) {
-
   .hero-left h1 { font-size: 1.9rem; }
   .hero-left p { font-size: .9rem; }
 
@@ -330,11 +283,7 @@ html, body {
   .review-card { padding: 1.5rem; }
 }
 
-
-
-/* =============== 400px (SMALL PHONES) =============== */
 @media (max-width: 400px) {
-
   .hero-left h1 { font-size: 1.7rem; }
 
   .book-card { min-width: 140px; }

@@ -1,6 +1,3 @@
-/* ======================
-      HEADER BASE
-====================== */
 .header-fixed {
   position: fixed;
   inset: 0 0 auto 0;
@@ -24,7 +21,6 @@
   color: var(--text-main);
 }
 
-/* SEARCH BOX */
 .search-box {
   position: relative;
   width: 40%;
@@ -49,7 +45,6 @@
   cursor: pointer;
 }
 
-/* ICONS */
 .icons a {
   text-decoration: none;
 }
@@ -66,7 +61,6 @@
   color: var(--brand);
 }
 
-/* BOTTOM NAV */
 .bottom-nav {
   display: flex;
   justify-content: center;
@@ -83,23 +77,16 @@
   font-size: 0.95rem;
 }
 
-/* ======================
-      RESPONSIVE
-====================== */
-
-/* 1200px */
 @media (max-width: 1200px) {
   .search-box { width: 35%; }
 }
 
-/* 992px */
 @media (max-width: 992px) {
   .search-box { width: 45%; }
   .top-nav { padding: 1rem; }
   .icons i { font-size: 1.4rem; }
 }
 
-/* 768px */
 @media (max-width: 768px) {
   .bottom-nav {
     gap: 1.2rem;
@@ -108,7 +95,6 @@
   .search-box { width: 55%; }
 }
 
-/* 576px */
 @media (max-width: 576px) {
   .top-nav {
     flex-direction: column;
@@ -122,7 +108,6 @@
   }
 }
 
-/* 400px */
 @media (max-width: 400px) {
   .logo { font-size: 1.1rem; }
   .icons i { font-size: 1.3rem; }

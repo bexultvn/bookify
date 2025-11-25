@@ -1,12 +1,11 @@
-// Загружаем HEADER
-fetch("/components/header.html")
-  .then(res => res.text())
-  .then(html => {
-    document.getElementById("header").innerHTML = html;
-  });
-// Загружаем FOOTER
-fetch("/components/footer.html")
-  .then(res => res.text())
-  .then(html => {
-    document.getElementById("footer").innerHTML = html;
-  });
+const injectFragment = (targetId, url) => {
+  const target = document.getElementById(targetId);
+  if (!target) return;
+
+  fetch(url)
+    .then(res => res.text())
+    .then(html => { target.innerHTML = html; });
+};
+
+injectFragment("header", "/components/header.html");
+injectFragment("footer", "/components/footer.html");

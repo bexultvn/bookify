@@ -1,14 +1,11 @@
-/* GLOBAL FIX */
 html, body {
   overflow-x: hidden;
 }
 
-/* FIX HEADER SPACING */
 body {
   padding-top: 140px;
 }
 
-/* MAIN LAYOUT */
 .cart-section {
   padding: 3rem 2rem 4rem;
   background: var(--bg-main);
@@ -25,7 +22,6 @@ body {
   margin-bottom: 30px;
 }
 
-/* TWO COLUMNS */
 .cart-container {
   display: flex;
   gap: 40px;
@@ -35,7 +31,6 @@ body {
   justify-content: center;
 }
 
-/* LEFT ITEMS */
 .cart-items {
   flex: 1;
   display: flex;
@@ -45,7 +40,6 @@ body {
   width: 100%;
 }
 
-/* CART ITEM */
 .cart-item {
   display: grid;
   grid-template-columns: 80px 1fr auto auto auto;
@@ -64,7 +58,6 @@ body {
   transform: translateY(-2px);
 }
 
-/* BOOK IMAGE */
 .cart-img {
   width: 80px;
   height: 110px;
@@ -72,7 +65,6 @@ body {
   border-radius: 8px;
 }
 
-/* BOOK INFO */
 .cart-info h3 {
   font-size: 18px;
   font-weight: 600;
@@ -83,7 +75,6 @@ body {
   color: var(--text-muted);
 }
 
-/* QUANTITY */
 .qty-box {
   display: flex;
   align-items: center;
@@ -121,13 +112,11 @@ body {
   font-weight: 600;
 }
 
-/* PRICE */
 .cart-price {
   font-size: 18px;
   font-weight: 600;
 }
 
-/* REMOVE BTN */
 .remove-btn {
   font-size: 22px;
   cursor: pointer;
@@ -142,7 +131,6 @@ body {
   color: var(--brand);
 }
 
-/* SUMMARY BOX */
 .cart-summary {
   width: 320px;
   background: var(--bg-card);
@@ -172,7 +160,6 @@ body {
   margin-top: 10px;
 }
 
-/* CHECKOUT BTN */
 .checkout-btn {
   width: 100%;
   margin-top: 25px;
@@ -191,108 +178,97 @@ body {
   background: var(--brand-hover);
 }
 
-/* ========================================
- RESPONSIVE BREAKPOINTS
-======================================== */
-
-/* ===== 1200px ===== */
 @media (max-width: 1200px) {
   .cart-section {
-      padding: 2rem 1.5rem;
+    padding: 2rem 1.5rem;
   }
 
   .cart-summary {
-      width: 300px;
-      flex-basis: 300px;
+    width: 300px;
+    flex-basis: 300px;
   }
 }
 
-/* ===== 992px ===== */
 @media (max-width: 992px) {
   body { padding-top: 170px; }
 
   .cart-container {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .cart-summary {
-      width: 100%;
-      max-width: 400px;
-      margin-top: 20px;
-      flex-basis: auto;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+    flex-basis: auto;
   }
 }
 
-/* ===== 768px ===== */
 @media (max-width: 768px) {
-
   .cart-item {
-      grid-template-columns: 70px 1fr auto;
-      grid-template-areas:
-          "img info remove"
-          "img qty qty"
-          "img price price";
-      row-gap: 14px;
+    grid-template-columns: 70px 1fr auto;
+    grid-template-areas:
+      "img info remove"
+      "img qty qty"
+      "img price price";
+    row-gap: 14px;
   }
 
   .cart-img {
-      grid-area: img;
+    grid-area: img;
   }
 
   .cart-info {
-      grid-area: info;
+    grid-area: info;
   }
 
   .qty-box {
-      grid-area: qty;
+    grid-area: qty;
   }
 
   .cart-price {
-      grid-area: price;
+    grid-area: price;
   }
 
   .remove-btn {
-      grid-area: remove;
-      justify-self: flex-end;
+    grid-area: remove;
+    justify-self: flex-end;
   }
 }
 
-/* ===== 576px ===== */
 @media (max-width: 576px) {
   body { padding-top: 190px; }
 
   .cart-item {
-      padding: 16px;
+    padding: 16px;
   }
 
   .cart-title {
-      font-size: 28px;
+    font-size: 28px;
   }
 
   .qty-btn {
-      width: 28px;
-      height: 28px;
+    width: 28px;
+    height: 28px;
   }
 
   .cart-summary {
-      padding: 20px;
+    padding: 20px;
   }
 }
 
-/* ===== 420px ===== */
 @media (max-width: 420px) {
-
   .cart-item {
-      grid-template-columns: 60px 1fr;
-      grid-template-areas:
-          "img remove"
-          "img info"
-          "img qty"
-          "img price";
-      text-align: left;
+    grid-template-columns: 60px 1fr;
+    grid-template-areas:
+      "img remove"
+      "img info"
+      "img qty"
+      "img price";
+    text-align: left;
   }
 
   .remove-btn {
-      justify-self: flex-end;
+    justify-self: flex-end;
   }
 }
