@@ -22,9 +22,9 @@
       <a href="cart.html" class="icon-btn">
         <i class='bx bx-cart'></i>
       </a>
-      <a href="account.html" class="icon-btn">
+      <button class="icon-btn" type="button" aria-label="Open account" data-auth-open>
         <i class='bx bx-user'></i>
-      </a>
+      </button>
     </div>
   </div>
 
@@ -34,4 +34,55 @@
     <a href="library.html">Library</a>
     <a href="index.html#reviews">Reviews</a>
   </nav>
+
+  <div class="auth-overlay" data-auth-overlay>
+    <div class="auth-modal" role="dialog" aria-modal="true" aria-labelledby="auth-title">
+      <button class="auth-close" type="button" aria-label="Close auth" data-auth-close>&times;</button>
+      <h2 id="auth-title">Sign In</h2>
+      <div class="auth-tabs">
+        <button class="auth-tab active" type="button" data-auth-tab="login">Sign In</button>
+        <button class="auth-tab" type="button" data-auth-tab="register">Register</button>
+      </div>
+
+      <form class="auth-form active" data-auth-form="login">
+        <div class="auth-field">
+          <label for="login-email">Email</label>
+          <input id="login-email" type="email" placeholder="you@example.com">
+        </div>
+        <div class="auth-field">
+          <label for="login-password">Password</label>
+          <input id="login-password" type="password" placeholder="••••••••">
+        </div>
+        <label class="auth-remember">
+          <input type="checkbox"> Remember me
+        </label>
+        <div class="auth-actions">
+          <button class="auth-submit" type="button">Sign In</button>
+          <a href="#">Forgot password?</a>
+        </div>
+        <div class="auth-note">
+          Don't have an account? <a href="#" data-auth-tab-trigger="register">Create one</a>
+        </div>
+      </form>
+
+      <form class="auth-form" data-auth-form="register">
+        <div class="auth-field">
+          <label for="register-name">Full Name</label>
+          <input id="register-name" type="text" placeholder="Your name">
+        </div>
+        <div class="auth-field">
+          <label for="register-email">Email</label>
+          <input id="register-email" type="email" placeholder="you@example.com">
+        </div>
+        <div class="auth-field">
+          <label for="register-password">Password</label>
+          <input id="register-password" type="password" placeholder="••••••••">
+        </div>
+        <button class="auth-submit" type="button">Create Account</button>
+        <div class="auth-note">
+          Already have an account? <a href="#" data-auth-tab-trigger="login">Sign in</a>
+        </div>
+      </form>
+    </div>
+  </div>
 </header>
