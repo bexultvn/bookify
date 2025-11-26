@@ -1,3 +1,4 @@
+// Static seed data used across catalog, favorites, and cart views
 const books = [
     {
       id: 1,

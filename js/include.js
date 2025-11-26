@@ -1,3 +1,4 @@
+// Lightweight include helper to pull shared header/footer into each page
 const injectFragment = (targetId, url, onLoad) => {
   const target = document.getElementById(targetId);
   if (!target) return;
@@ -13,6 +14,7 @@ const injectFragment = (targetId, url, onLoad) => {
     });
 };
 
+// Wire up navigation, search, and auth modal interactions once header is injected
 const setupHeader = container => {
   const header = container.querySelector(".header-fixed");
   if (!header) return;
@@ -64,6 +66,7 @@ const setupHeader = container => {
     })
   );
 
+  // Keep active state in sync with page + hash
   const syncNavWithLocation = () => {
     const currentPage =
       window.location.pathname.split("/").pop() || "index.html";
@@ -101,6 +104,7 @@ const setupHeader = container => {
   };
   syncNavWithLocation();
 
+  // If a search starts on another page, push focus to the library search box
   const SEARCH_FOCUS_KEY = "bookify:focusSearch";
   const redirectToLibrary = () => {
     const currentPage =
@@ -119,6 +123,7 @@ const setupHeader = container => {
     sessionStorage.removeItem(SEARCH_FOCUS_KEY);
   }
 
+  // Auth modal open/close + tab handling
   const openAuth = targetTab => {
     if (!authOverlay) return;
     authOverlay.classList.add("active");

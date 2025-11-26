@@ -1,8 +1,10 @@
 (() => {
+  // In-page state + storage keys shared across pages
   const books = Array.isArray(window.books) ? window.books : [];
   const FAVORITES_KEY = "bookify:favorites";
   const CART_KEY = "bookify:cart";
 
+  // Helpers to safely read/write list data from localStorage
   const loadArray = key => {
     try {
       const raw = localStorage.getItem(key);
@@ -34,6 +36,7 @@
       maximumFractionDigits: 2
     })}`;
 
+  // Accept absolute URLs or local assets while keeping a sane fallback
   const resolveImage = path => {
     if (!path) return "../images/book.png";
     if (/^https?:\/\//.test(path)) return path;
@@ -82,6 +85,7 @@
     featured.forEach(book => container.appendChild(createCard(book)));
   };
 
+  // Active filter inputs for the library/favorites pages
   const filters = {
     genres: new Set(),
     author: "",
@@ -119,6 +123,7 @@
     });
   };
 
+  // Core filtering logic used by the library grid
   const getFilteredBooks = () => {
     const query = filters.search.trim().toLowerCase();
     return books.filter(book => {
@@ -133,6 +138,7 @@
     });
   };
 
+  // Draw library cards based on the current filters
   const renderLibrary = () => {
     const container = document.querySelector("[data-library-grid]");
     if (!container) return;
@@ -151,6 +157,7 @@
     );
   };
 
+  // Draw only favorited books, still honoring the search box
   const renderFavorites = () => {
     const container = document.querySelector("[data-favorites-grid]");
     if (!container) return;
@@ -195,6 +202,7 @@
     });
   };
 
+  // Toggle heart UI + persist favorites
   const toggleFavorite = id => {
     if (!id) return;
     if (favorites.has(id)) {
@@ -207,6 +215,7 @@
     renderFavorites();
   };
 
+  // Line-item operations keep cart + badge in sync with storage
   const addToCart = id => {
     if (!id) return;
     const existing = cart.find(item => item.id === id);
@@ -237,6 +246,7 @@
     updateCartBadge();
   };
 
+  // Build the cart page rows and recompute totals
   const renderCart = () => {
     const container = document.querySelector("[data-cart-items]");
     if (!container) return;
@@ -299,6 +309,7 @@
     setValue("[data-cart-total]", total);
   };
 
+  // Global click handlers: hearts, add-to-cart, remove, and quantity buttons
   document.addEventListener("click", event => {
     const heart = event.target.closest("[data-heart]");
     if (heart) {
@@ -329,6 +340,7 @@
     }
   });
 
+  // Global change handlers: quantity input + filter controls
   document.addEventListener("change", event => {
     const qtyInput = event.target.closest("[data-qty-input]");
     if (qtyInput) {
@@ -356,6 +368,7 @@
     }
   });
 
+  // Search box is shared; update both library and favorites as the user types
   document.addEventListener("input", event => {
     const searchInput = event.target.closest(".search-box input");
     if (searchInput) {
@@ -365,6 +378,7 @@
     }
   });
 
+  // Initial paint across all pages that mount this script
   const init = () => {
     renderGenreFilters();
     renderAuthorFilter();

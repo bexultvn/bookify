@@ -18,9 +18,11 @@
 
 <body>
 
+  <!-- Shared navigation/header injected via JS -->
   <section id="header"></section>
 
   <main>
+    <!-- Hero lead content -->
     <section class="hero">
       <div class="hero-left">
         <h1>Find Your Next Favorite Read</h1>
@@ -36,6 +38,7 @@
       </div>
     </section>
 
+    <!-- Quick service highlights -->
     <section class="features">
       <div class="feature-item">
         <i class='bx bxs-truck'></i>
@@ -70,12 +73,14 @@
       </div>
     </section>
 
+    <!-- Homepage featured catalog -->
     <section class="featured-books" id="featured">
       <h2 class="section-title">Featured Books</h2>
 
       <div class="books-row" data-featured-row></div>
     </section>
 
+    <!-- Simple marketing CTA -->
     <section class="subscribe-section">
       <div class="subscribe-right">
         <h2>Subscribe For Latest Updates</h2>
@@ -84,6 +89,7 @@
       </div>
     </section>
 
+    <!-- Social proof/reviews -->
     <section class="reviews-section" id="reviews">
       <h2 class="section-title">Client's Reviews</h2>
 
@@ -142,12 +148,14 @@
     </section>
   </main>
 
+  <!-- Shared footer injected via JS -->
   <section id="footer"></section>
 
   <script src="/js/books.js"></script>
   <script src="/js/catalog.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
+      // CTA button pushes shoppers straight into the library view
       const shopBtn = document.querySelector("[data-shop-now]");
       shopBtn?.addEventListener("click", () => {
         window.location.href = "library.html";
