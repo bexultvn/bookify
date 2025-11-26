@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Library – Bookify</title>
+  <title>Favorites – Bookify</title>
 
   <link rel="stylesheet" href="variables.css">
   <link rel="stylesheet" href="base.css">
@@ -22,123 +22,13 @@
   <section id="header"></section>
 
   <section class="library-section">
-    <div class="library-grid">
-      <div class="book-card">
-        <div class="book-image">
-          <img src="../images/book.png" alt="book">
-          <i class="bx bxs-heart"></i>
-        </div>
-        <h3>The Grammar of English</h3>
-        <p class="author">Goold Brown</p>
-        <div class="price">
-          <span class="current">$15.99</span>
-          <span class="old">$20.99</span>
-        </div>
-        <button class="btn-add">Add To Cart</button>
-      </div>
-
-      <div class="book-card">
-        <div class="book-image">
-          <img src="../images/book.png" alt="book">
-          <i class="bx bxs-heart"></i>
-        </div>
-        <h3>The Grammar of English</h3>
-        <p class="author">Goold Brown</p>
-        <div class="price">
-          <span class="current">$15.99</span>
-          <span class="old">$20.99</span>
-        </div>
-        <button class="btn-add">Add To Cart</button>
-      </div>
-
-      <div class="book-card">
-        <div class="book-image">
-          <img src="../images/book.png" alt="book">
-          <i class="bx bxs-heart"></i>
-        </div>
-        <h3>The Grammar of English</h3>
-        <p class="author">Goold Brown</p>
-        <div class="price">
-          <span class="current">$15.99</span>
-          <span class="old">$20.99</span>
-        </div>
-        <button class="btn-add">Add To Cart</button>
-      </div>
-
-      <div class="book-card">
-        <div class="book-image">
-          <img src="../images/book.png" alt="book">
-          <i class="bx bxs-heart"></i>
-        </div>
-        <h3>The Grammar of English</h3>
-        <p class="author">Goold Brown</p>
-        <div class="price">
-          <span class="current">$15.99</span>
-          <span class="old">$20.99</span>
-        </div>
-        <button class="btn-add">Add To Cart</button>
-      </div>
-
-      <div class="book-card">
-        <div class="book-image">
-          <img src="../images/book.png" alt="book">
-          <i class="bx bxs-heart"></i>
-        </div>
-        <h3>The Grammar of English</h3>
-        <p class="author">Goold Brown</p>
-        <div class="price">
-          <span class="current">$15.99</span>
-          <span class="old">$20.99</span>
-        </div>
-        <button class="btn-add">Add To Cart</button>
-      </div>
-
-      <div class="book-card">
-        <div class="book-image">
-          <img src="../images/book.png" alt="book">
-          <i class="bx bxs-heart"></i>
-        </div>
-        <h3>Start With Why</h3>
-        <p class="author">Simon Sinek</p>
-        <div class="price">
-          <span class="current">$12.99</span>
-          <span class="old">$18.99</span>
-        </div>
-        <button class="btn-add">Add To Cart</button>
-      </div>
-
-      <div class="book-card">
-        <div class="book-image">
-          <img src="../images/book.png" alt="book">
-          <i class="bx bxs-heart"></i>
-        </div>
-        <h3>May It Please The Court</h3>
-        <p class="author">Daniel Maldonado</p>
-        <div class="price">
-          <span class="current">$14.99</span>
-          <span class="old">$21.99</span>
-        </div>
-        <button class="btn-add">Add To Cart</button>
-      </div>
-
-      <div class="book-card">
-        <div class="book-image">
-          <img src="../images/book.png" alt="book">
-          <i class="bx bxs-heart"></i>
-        </div>
-        <h3>The Lean Startup</h3>
-        <p class="author">Eric Ries</p>
-        <div class="price">
-          <span class="current">$19.99</span>
-          <span class="old">$24.99</span>
-        </div>
-        <button class="btn-add">Add To Cart</button>
-      </div>
-    </div>
+    <div class="library-grid" data-favorites-grid></div>
   </section>
 
   <section id="footer"></section>
 
+  <script src="/js/books.js"></script>
+  <script src="/js/catalog.js"></script>
   <script src="/js/include.js"></script>
 </body>
 </html>
