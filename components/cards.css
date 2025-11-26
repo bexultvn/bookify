@@ -44,6 +44,9 @@
   font-size: 1rem;
   margin: 1rem 0;
   font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .price { margin-bottom: 1rem; }

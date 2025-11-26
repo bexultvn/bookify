@@ -13,7 +13,7 @@ const injectFragment = (targetId, url, onLoad) => {
     });
 };
 
-  const setupHeader = container => {
+const setupHeader = container => {
   const header = container.querySelector(".header-fixed");
   if (!header) return;
 
@@ -37,6 +37,8 @@ const injectFragment = (targetId, url, onLoad) => {
     );
   };
 
+  const clearNavActive = () => setActiveLink(null);
+
   navToggle?.addEventListener("click", () => {
     header.classList.toggle("menu-open");
   });
@@ -52,11 +54,13 @@ const injectFragment = (targetId, url, onLoad) => {
     link.addEventListener("click", event => {
       setActiveLink(event.currentTarget);
       header.classList.remove("menu-open");
+      setActiveAction(null);
     })
   );
   actionLinks.forEach(link =>
     link.addEventListener("click", event => {
       setActiveAction(event.currentTarget);
+      clearNavActive();
     })
   );
 
@@ -88,20 +92,32 @@ const injectFragment = (targetId, url, onLoad) => {
       const linkPage = url.pathname.split("/").pop() || "index.html";
       return linkPage === currentPage;
     });
-    if (actionMatch) setActiveAction(actionMatch);
-    else setActiveAction(null);
+    if (actionMatch) {
+      setActiveAction(actionMatch);
+      clearNavActive();
+    } else {
+      setActiveAction(null);
+    }
   };
   syncNavWithLocation();
 
+  const SEARCH_FOCUS_KEY = "bookify:focusSearch";
   const redirectToLibrary = () => {
     const currentPage =
       window.location.pathname.split("/").pop() || "index.html";
     if (currentPage !== "library.html") {
+      sessionStorage.setItem(SEARCH_FOCUS_KEY, "1");
       window.location.href = "library.html";
+    } else {
+      searchInput?.focus();
     }
   };
   searchInput?.addEventListener("focus", redirectToLibrary);
   searchInput?.addEventListener("click", redirectToLibrary);
+  if (sessionStorage.getItem(SEARCH_FOCUS_KEY) === "1") {
+    searchInput?.focus();
+    sessionStorage.removeItem(SEARCH_FOCUS_KEY);
+  }
 
   const openAuth = targetTab => {
     if (!authOverlay) return;

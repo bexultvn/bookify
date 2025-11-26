@@ -65,5 +65,4 @@ const books = [
     }
   ];
 
-// Expose globally so every page can reuse the same dataset.
 window.books = books;

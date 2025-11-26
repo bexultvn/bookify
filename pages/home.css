@@ -133,12 +133,18 @@ html, body {
 
 .subscribe-btn {
   width: fit-content;
-  padding: 0.8rem 2rem;
+  padding: 0.85rem 1.8rem;
   background: var(--brand);
   color: var(--text-on-brand);
-  border-radius: 6px;
-  font-weight: 600;
+  border-radius: 10px;
+  font-weight: 700;
   cursor: pointer;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  font-size: 1rem;
 }
 
 .subscribe-btn:hover {

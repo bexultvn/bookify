@@ -20,6 +20,7 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  flex: 1;
 }
 
 .logo {
@@ -55,7 +56,10 @@
 
 .search-box {
   position: relative;
-  width: 40%;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  flex: 1.4;
 }
 
 .search-box input {
@@ -81,6 +85,8 @@
   display: flex;
   align-items: center;
   gap: 0.6rem;
+  flex: 1;
+  justify-content: flex-end;
   position: relative;
 }
 
@@ -140,11 +146,11 @@
 }
 
 @media (max-width: 1200px) {
-  .search-box { width: 35%; }
+  .search-box { max-width: 460px; }
 }
 
 @media (max-width: 992px) {
-  .search-box { width: 45%; }
+  .search-box { max-width: 420px; }
   .top-nav { padding: 1rem var(--page-gutter); }
   .actions i { font-size: 1.3rem; }
 }

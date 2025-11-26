@@ -1,11 +1,17 @@
 .btn-primary {
   background: var(--brand);
   color: var(--text-on-brand);
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
+  padding: 0.85rem 1.8rem;
+  border-radius: 10px;
   border: none;
   cursor: pointer;
   transition: 0.2s ease;
+  font-weight: 700;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
 }
 
 .btn-primary:hover {

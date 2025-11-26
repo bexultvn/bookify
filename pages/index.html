@@ -22,12 +22,12 @@
 
   <section class="hero">
     <div class="hero-left">
-      <h1>Upto 75% Off</h1>
+      <h1>Find Your Next Favorite Read</h1>
       <p>
-        Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Magnam Deserunt
-        Nostrum Accusamus. Nam Alias Sit Necessitatibus, Aliquid Ex Minima At!
+        Curated picks, fast delivery, and easy browsing. Discover the stories, insights,
+        and lessons you’ve been looking for, all in one place.
       </p>
-      <button class="btn-primary">Shop Now</button>
+      <button class="btn-primary" data-shop-now>Shop Now</button>
     </div>
 
     <div class="hero-right">
@@ -79,7 +79,7 @@
     <div class="subscribe-right">
       <h2>Subscribe For Latest Updates</h2>
       <input type="email" placeholder="Enter your email..." class="subscribe-input">
-      <button class="subscribe-btn">Subscribe</button>
+      <button class="subscribe-btn btn-primary">Subscribe</button>
     </div>
   </section>
 
@@ -89,10 +89,11 @@
     <div class="reviews-row">
       <div class="review-card">
         <img class="review-avatar" src="../images/avatar.png" alt="client">
-        <h3>John Deo</h3>
+        <h3>John R.</h3>
         <p>
-          Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Aspernatur Nihil Ipsa Placeat.
-          Aperiam At Sint, Eos Ex Similique Facere Hic.
+          "Bookify has become my favorite online bookstore. The interface is clean, the categories
+          are easy to explore, and the delivery was much faster than I expected. I found books here
+          that I couldn’t find anywhere else!"
         </p>
         <div class="stars">
           <i class='bx bxs-star'></i>
@@ -104,11 +105,12 @@
       </div>
 
       <div class="review-card">
-        <img class="review-avatar" src="../images/avatar.png" alt="client">
-        <h3>John Deo</h3>
+        <img class="review-avatar" src="../images/avatar3.png" alt="client">
+        <h3>Daniel K.</h3>
         <p>
-          Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Aspernatur Nihil Ipsa Placeat.
-          Aperiam At Sint, Eos Ex Similique Facere Hic.
+          "Amazing experience! I’ve already ordered five books, and each time the packaging was great
+          and the prices were super fair. I also love the Wish List feature — makes it so easy to save
+          books for later."
         </p>
         <div class="stars">
           <i class='bx bxs-star'></i>
@@ -120,11 +122,12 @@
       </div>
 
       <div class="review-card">
-        <img class="review-avatar" src="../images/avatar.png" alt="client">
-        <h3>John Deo</h3>
+        <img class="review-avatar" src="../images/avatar2.png" alt="client">
+        <h3>Alexa M.</h3>
         <p>
-          Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Aspernatur Nihil Ipsa Placeat.
-          Aperiam At Sint, Eos Ex Similique Facere Hic.
+          "I love how organized Bookify is. The reviews, the filters, and the clear pricing helped me
+          pick exactly what I wanted. Customer support was also very responsive. Definitely recommending
+          this store to my friends!"
         </p>
         <div class="stars">
           <i class='bx bxs-star'></i>
@@ -141,6 +144,14 @@
 
   <script src="/js/books.js"></script>
   <script src="/js/catalog.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const shopBtn = document.querySelector("[data-shop-now]");
+      shopBtn?.addEventListener("click", () => {
+        window.location.href = "library.html";
+      });
+    });
+  </script>
   <script src="/js/include.js"></script>
 </body>
 </html>
