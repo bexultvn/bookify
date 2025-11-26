@@ -1,7 +1,7 @@
 <header class="header-fixed">
   <div class="top-nav">
     <div class="top-left">
-      <button class="icon-btn nav-toggle" type="button" aria-label="Toggle menu" data-nav-toggle>
+      <button class="icon-btn nav-toggle" type="button" data-nav-toggle>
         <i class='bx bx-menu'></i>
       </button>
       <div class="logo">Bookify</div>
@@ -13,7 +13,7 @@
     </div>
 
     <div class="actions">
-      <button class="icon-btn search-toggle" type="button" aria-label="Toggle search" data-search-toggle>
+      <button class="icon-btn search-toggle" type="button" data-search-toggle>
         <i class='bx bx-search'></i>
       </button>
       <a href="/pages/favorites.html" class="icon-btn">
@@ -23,7 +23,7 @@
         <i class='bx bx-cart'></i>
         <span class="badge" data-cart-count>0</span>
       </a>
-      <button class="icon-btn" type="button" aria-label="Open account" data-auth-open>
+      <button class="icon-btn" type="button" data-auth-open>
         <i class='bx bx-user'></i>
       </button>
     </div>
@@ -37,8 +37,8 @@
   </nav>
 
   <div class="auth-overlay" data-auth-overlay>
-    <div class="auth-modal" role="dialog" aria-modal="true" aria-labelledby="auth-title">
-      <button class="auth-close" type="button" aria-label="Close auth" data-auth-close>&times;</button>
+    <div class="auth-modal">
+      <button class="auth-close" type="button" data-auth-close>&times;</button>
       <h2 id="auth-title">Sign In</h2>
       <div class="auth-tabs">
         <button class="auth-tab active" type="button" data-auth-tab="login">Sign In</button>

@@ -107,13 +107,6 @@ body {
   background: var(--bg-muted);
 }
 
-.qty-number {
-  padding: 6px 14px;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  font-weight: 600;
-}
-
 .cart-price {
   font-size: 18px;
   font-weight: 600;
