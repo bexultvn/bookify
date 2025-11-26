@@ -82,27 +82,18 @@ html, body {
   margin-bottom: 2rem;
 }
 
+.featured-books {
+  scroll-margin-top: 150px;
+}
+
 .books-row {
   display: flex;
   gap: 2rem;
-  overflow-x: auto;
   padding: 0 var(--page-gutter) 1rem;
   scroll-behavior: smooth;
   width: 100%;
-  justify-content: flex-start;
-}
-
-.books-row::-webkit-scrollbar {
-  height: 8px;
-}
-
-.books-row::-webkit-scrollbar-thumb {
-  background: var(--brand);
-  border-radius: 10px;
-}
-
-.books-row::-webkit-scrollbar-track {
-  background: var(--bg-muted);
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .subscribe-section {
@@ -158,6 +149,7 @@ html, body {
   padding: 4rem var(--page-gutter);
   background: var(--bg-main);
   width: 100%;
+  scroll-margin-top: 150px;
 }
 
 .reviews-row {
@@ -239,6 +231,11 @@ html, body {
     max-width: 420px;
   }
 
+  .featured-books,
+  .reviews-section {
+    scroll-margin-top: 130px;
+  }
+
   .subscribe-section {
     padding: 2rem 2rem;
     height: auto;
@@ -272,6 +269,11 @@ html, body {
   .book-card { min-width: 150px; }
 
   .review-card { padding: 1.5rem; }
+
+  .featured-books,
+  .reviews-section {
+    scroll-margin-top: 120px;
+  }
 }
 
 @media (max-width: 420px) {

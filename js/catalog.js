@@ -78,13 +78,14 @@
     const container = document.querySelector("[data-featured-row]");
     if (!container) return;
     container.innerHTML = "";
-    const featured = books.slice(0, 6);
+    const featured = books.slice(0, 4);
     featured.forEach(book => container.appendChild(createCard(book)));
   };
 
   const filters = {
     genres: new Set(),
-    author: ""
+    author: "",
+    search: ""
   };
 
   const renderGenreFilters = () => {
@@ -118,13 +119,19 @@
     });
   };
 
-  const getFilteredBooks = () =>
-    books.filter(book => {
+  const getFilteredBooks = () => {
+    const query = filters.search.trim().toLowerCase();
+    return books.filter(book => {
       const matchGenre =
         filters.genres.size === 0 || filters.genres.has(book.genre);
       const matchAuthor = !filters.author || filters.author === book.author;
-      return matchGenre && matchAuthor;
+      const matchQuery =
+        !query ||
+        book.title.toLowerCase().startsWith(query) ||
+        (book.author && book.author.toLowerCase().startsWith(query));
+      return matchGenre && matchAuthor && matchQuery;
     });
+  };
 
   const renderLibrary = () => {
     const container = document.querySelector("[data-library-grid]");
@@ -148,7 +155,15 @@
     const container = document.querySelector("[data-favorites-grid]");
     if (!container) return;
 
-    const favoriteBooks = books.filter(book => favorites.has(book.id));
+    const query = filters.search.trim().toLowerCase();
+    const favoriteBooks = books.filter(book => {
+      if (!favorites.has(book.id)) return false;
+      if (!query) return true;
+      return (
+        book.title.toLowerCase().startsWith(query) ||
+        (book.author && book.author.toLowerCase().startsWith(query))
+      );
+    });
     container.innerHTML = "";
 
     if (!favoriteBooks.length) {
@@ -163,6 +178,13 @@
   };
 
   const saveCart = () => saveArray(CART_KEY, cart);
+  const updateCartBadge = () => {
+    const count = cart.length;
+    document.querySelectorAll("[data-cart-count]").forEach(el => {
+      el.textContent = count > 0 ? count : "0";
+      el.style.display = count > 0 ? "inline-flex" : "none";
+    });
+  };
   const saveFavorites = () => saveArray(FAVORITES_KEY, Array.from(favorites));
 
   const updateHearts = () => {
@@ -195,6 +217,7 @@
     }
     saveCart();
     renderCart();
+    updateCartBadge();
   };
 
   const setQuantity = (id, qty) => {
@@ -204,12 +227,14 @@
     item.qty = nextQty;
     saveCart();
     renderCart();
+    updateCartBadge();
   };
 
   const removeFromCart = id => {
     cart = cart.filter(item => item.id !== id);
     saveCart();
     renderCart();
+    updateCartBadge();
   };
 
   const renderCart = () => {
@@ -258,6 +283,7 @@
     });
 
     updateCartSummary({ subtotal, shipping: 0, tax: 0 });
+    updateCartBadge();
   };
 
   const updateCartSummary = ({ subtotal, shipping, tax }) => {
@@ -330,7 +356,16 @@
     }
   });
 
-  document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("input", event => {
+    const searchInput = event.target.closest(".search-box input");
+    if (searchInput) {
+      filters.search = searchInput.value || "";
+      renderLibrary();
+      renderFavorites();
+    }
+  });
+
+  const init = () => {
     renderGenreFilters();
     renderAuthorFilter();
     renderFeatured();
@@ -338,5 +373,13 @@
     renderFavorites();
     renderCart();
     updateHearts();
+    updateCartBadge();
+  };
+
+  document.addEventListener("DOMContentLoaded", init);
+  window.addEventListener("fragment:loaded", event => {
+    if (event.detail?.id === "header") {
+      updateCartBadge();
+    }
   });
 })();

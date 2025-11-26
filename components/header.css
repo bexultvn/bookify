@@ -81,10 +81,39 @@
   display: flex;
   align-items: center;
   gap: 0.6rem;
+  position: relative;
 }
 
 .actions i {
   font-size: 1.4rem;
+}
+
+.icon-btn {
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: var(--brand);
+  color: var(--text-on-brand);
+  border-radius: 999px;
+  padding: 2px 6px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1;
+  min-width: 18px;
+  text-align: center;
+  transform: translate(50%, -50%);
+  pointer-events: none;
+  display: none;
+}
+
+.actions .icon-btn.active {
+  border-color: var(--brand);
+  color: var(--brand);
+  background: var(--bg-muted);
 }
 
 .bottom-nav {
@@ -101,6 +130,13 @@
   font-weight: 600;
   text-decoration: none;
   font-size: 0.95rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+}
+
+.bottom-nav a.active {
+  background: var(--text-on-brand);
+  color: var(--brand);
 }
 
 @media (max-width: 1200px) {

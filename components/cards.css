@@ -11,13 +11,15 @@
 
 .book-image {
   position: relative;
-  width: 100%;
-  height: 230px;
+  width: calc(100% + 2rem);
+  margin: -1rem -1rem 0;
+  height: 320px;
   background: var(--bg-main);
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  border-radius: 10px 10px 0 0;
 }
 
 .book-image img {
@@ -36,6 +38,7 @@
 }
 
 .book-image i:hover { color: var(--brand); }
+.book-image i.bxs-heart { color: var(--brand); }
 
 .book-card h3 {
   font-size: 1rem;
@@ -53,15 +56,15 @@
 
 @media (max-width: 768px) {
   .book-card { max-width: 200px; min-width: 160px; }
-  .book-image { height: 200px; }
+  .book-image { height: 260px; }
 }
 
 @media (max-width: 576px) {
   .book-card { max-width: 180px; min-width: 150px; }
-  .book-image { height: 170px; }
+  .book-image { height: 240px; }
 }
 
 @media (max-width: 420px) {
   .book-card { max-width: 160px; min-width: 140px; }
-  .book-image { height: 150px; }
+  .book-image { height: 220px; }
 }
