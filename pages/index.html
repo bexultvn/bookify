@@ -18,7 +18,7 @@
 
 <body>
 
-  <!-- Shared navigation/header injected via JS -->
+  <!-- Shared header injected via JS -->
   <section id="header"></section>
 
   <main>
@@ -80,7 +80,7 @@
       <div class="books-row" data-featured-row></div>
     </section>
 
-    <!-- Simple marketing CTA -->
+    <!-- Subscribe section -->
     <section class="subscribe-section">
       <div class="subscribe-right">
         <h2>Subscribe For Latest Updates</h2>
@@ -89,7 +89,7 @@
       </div>
     </section>
 
-    <!-- Social proof/reviews -->
+    <!-- Reviews -->
     <section class="reviews-section" id="reviews">
       <h2 class="section-title">Client's Reviews</h2>
 
@@ -155,7 +155,7 @@
   <script src="/js/catalog.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      // CTA button pushes shoppers straight into the library view
+      // Shop now button pushes shoppers straight into the library view
       const shopBtn = document.querySelector("[data-shop-now]");
       shopBtn?.addEventListener("click", () => {
         window.location.href = "library.html";
