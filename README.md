@@ -38,8 +38,3 @@
 - From project root: `python3 -m http.server 8000` then open `http://localhost:8000/pages/index.html`.
 - Opening via `file://` can break `/js/...` and `/components/...` paths.
 
-## Team split
-Bexultan: home page,all components and  js logic ,varaibles.css,base.css
-Yeldar:Library page  + js logic
-Ayaulym:Cart page + js logic
-Bakdaulet:Favorites page + js logic
